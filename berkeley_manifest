@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote name="opengapps" fetch="https://github.com/opengapps/"  />
+<remote name="gtpitch" fetch="https://github.com/gtpitch" />
+
+<project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengapps" />
+<project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps" />
+
+<!-- arm64 depends on arm -->
+<project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps" />
+<project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps" />
+
+<project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapp"/>
+<project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps" />
+
+<project path="vendor/huawei/berkeley" name="proprietary_vendor_huawei_berkeley" remote="gtpitch" revision="master" />
+
+<project path="device/huawei/berkeley" name="android_device_huawei_berkeley" remote="gtpitch" revision="test" />
+</manifest>
